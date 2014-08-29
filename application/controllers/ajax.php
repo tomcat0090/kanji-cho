@@ -11,10 +11,12 @@ class Ajax extends CI_Controller {
 	}
 	public function test()
 	{
-		echo json_encode(array('status' => 'success', 'word' => $this->input->post('word')));
+		$this->load->model('kanji_m');
+		$result = $this->kanji_m->eng2kanji($this->input->post('word'));
+		echo json_encode(array('status' => 'success', 'result' => $result));
 		exit();
 	}
 }
 
-/* End of file kanji.php */
-/* Location: ./application/controllers/kanji.php */
+/* End of file ajax.php */
+/* Location: ./application/controllers/ajax.php */

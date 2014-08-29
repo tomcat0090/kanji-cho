@@ -26,6 +26,7 @@
 					<div class="form-group">
 						<button type="submit" class="btn btn-default" id="doSearch">Submit</button>
 					</div>
+					<div id="result"></div>
 				<?php echo form_close()?>
 			</div>
 		</div><!-- /.row -->

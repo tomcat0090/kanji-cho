@@ -25,5 +25,5 @@ class Front extends CI_Controller {
 	}
 }
 
-/* End of file kanji.php */
-/* Location: ./application/controllers/kanji.php */
+/* End of file front.php */
+/* Location: ./application/controllers/front.php */

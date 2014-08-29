@@ -1,7 +1,6 @@
 $(document).ready(function(){
 	$("#doSearch").click(function () {
 		var word = $('#search').val();
-		console.log(word);
 		
 		$.ajax({
 				url: baseUrl+'index.php/ajax/test',
@@ -11,7 +10,10 @@ $(document).ready(function(){
 				},
 				dataType: 'json',
 				success: function( json ) {
-						console.log(json.word);
+						var len = json.result.length;
+						for(var i=0; i < len; i++){
+							$('#result').append(json.result[i].value);
+						}
 				},
 				error: function( data ) {
 						// ...
