@@ -44,7 +44,7 @@ INSERT INTO `kanji` (`id`, `value`) VALUES
 
 CREATE TABLE IF NOT EXISTS `relations` (
   `eng_id` int(10) unsigned NOT NULL,
-  `kanj_id` int(10) unsigned NOT NULL
+  `kanji_id` int(10) unsigned NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --

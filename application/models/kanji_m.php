@@ -17,9 +17,10 @@ class Kanji_M extends CI_Model
 
 	public function eng2kanji($word)
 	{
-		//$this->db->where('E.value', $word);
-		//$this->db->join($this->relation_table.' as R', 'K.id = R.kanji_id');
-		//$this->db->join($this->english_table.' as E', 'E.id = R.eng_id');
+		$this->db->select('K.value');
+		$this->db->where('E.value', $word);
+		$this->db->join($this->relation_table.' as R', 'K.id = R.kanji_id');
+		$this->db->join($this->english_table.' as E', 'E.id = R.eng_id');
 		$query = $this->db->get($this->kanji_table.' as K');
 		if($query->num_rows()) return $query->result();
 
