@@ -10,9 +10,13 @@ $(document).ready(function(){
 				},
 				dataType: 'json',
 				success: function( json ) {
+				console.log(json.result);
 						var len = json.result.length;
+							$('#selecter').empty();
+							if (json.result == false)
+								$('#selecter').append('<option value="0">見つかりません</option>');
 						for(var i=0; i < len; i++){
-							$('#result').append(json.result[i].value);
+							$('#selecter').append('<option value="'+json.result[i].id+'">'+json.result[i].value+'</option>');
 						}
 				},
 				error: function( data ) {

@@ -5,11 +5,7 @@
 	<meta charset="utf-8">
 	<title><?php echo$title?></title>
 	<link rel="stylesheet" href="<?php echo base_url()?>/assets/css/bootstrap.min.css">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
-	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 	<script src="<?php echo base_url()?>/assets/js/bootstrap.min.js"></script>
-	<script src="<?php echo base_url()?>/assets/js/custom.js"></script>
 </head>
 <body>
 
@@ -21,12 +17,14 @@
 				<h1>Kanji-cho</h1>
 				<?php echo form_open()?>
 					<div class="form-group">
-						<?php echo form_input($search)?>
+						<?php echo form_input($word1)?>
+					</div>
+					<div class="form-group">
+						<?php echo form_input($word2)?>
 					</div>
 					<div class="form-group">
 						<button type="submit" class="btn btn-default" id="doSearch">Submit</button>
 					</div>
-					<div><?php echo form_multiselect('target', array(null =>'選択してください'), null, 'id="selecter" class="col-md-4 col-md-offset-4"');?></div>
 					<div id="result"></div>
 				<?php echo form_close()?>
 			</div>
